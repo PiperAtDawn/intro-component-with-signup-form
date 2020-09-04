@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+$desktop: 1100px;
+$ultrawide: 1500px;
+
+@mixin ultrawide {
+    @media (min-width: #{$ultrawide}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ff7978;
+    color: white;
+    @include mobile {
+        background-image: url('../images/bg-intro-mobile.png');
+    }
+    @include desktop {
+        background-image: url('../images/bg-intro-desktop.png');
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 90px;
+        padding-bottom: 60px;
+
+        @include desktop {
+            flex-direction: row;  
+            padding-top: 120px;
+            padding-bottom: 120px;
+            padding-left: 165px;
+            padding-right: 165px;
+        }
+
+        header {
+            h1 {
+                margin-top: 0;
+                @include desktop {
+                    font-size: 3rem;
+                }
+            }
+            p {
+                margin-bottom: 70px;
+                @include ultrawide {
+                    font-size: 1.5rem;
+                }
+            }
+
+            @include desktop {
+                text-align: left;
+                width: 50%;
+            }
+        }
+
+        .signup {
+
+            @include desktop {
+                width: 50%;
+                margin-left: 75px;
+            }
+
+            .try {
+                height: 88px;
+                background-color: #5d54a3;
+                border-radius: 12px;
+                margin-bottom: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.18);
+                @include desktop {
+                    height: 60px;
+                    max-width: 750px;
+                }
+                span {
+                    font-weight: bolder;
+                }
+            }
+
+            form {
+                background-color: white;
+                color: hsl(246, 25%, 77%);
+                border-radius: 12px;
+                padding: 40px;
+                box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.18);
+
+                @include desktop {
+                    max-width: 750px;
+                }
+                .input {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    .error-msg {
+                        color: hsl(0, 100%, 74%);
+                        margin: 0;
+                        padding: 0;
+                        font-size: 0.7em;
+                        text-align: right;
+                        font-style: italic;
+                    }
+                    input {
+                        height: 55px;
+                        border-radius: 6px;
+                        border-style: solid;
+                        border-color: hsl(246, 25%, 77%);
+                        border-width: 1px;
+                        font-weight: 700;
+                        padding-left: 22px;
+                        font-size: 0.9rem;
+                    }
+                    .error-msg {
+                        visibility: hidden;
+                    }
+                    img {
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        visibility: hidden;
+                    }
+                }
+
+                .input.error{
+                    input {
+                        border-color: hsl(0, 100%, 74%);
+                        border-width: 2px;
+                    }
+
+                    img, .error-msg {
+                        visibility: visible;
+                    }
+                }
+
+                button {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    background-color: #37cc8a;
+                    color: white;
+                    height: 56px;
+                    border-style: none;
+                    border-radius: 6px;
+                    width: 100%;
+                    font-size: 0.9rem;
+                    letter-spacing: 1px;
+                    box-shadow: 0px 4px 0px 0px rgba(29, 100, 3, 0.5);
+                }
+            }
+
+            .terms {
+                span {
+                    color: hsl(0, 100%, 74%);
+                    font-weight: bolder;
+                }
+                font-size: 0.6rem;
+                line-height: 1.2rem;
+            }
+        }
+    }
+}

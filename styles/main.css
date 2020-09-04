@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff7978;
+  color: white;
+}
+
+@media (max-width: 1100px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+}
+
+body .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 1100px) {
+  body .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 165px;
+    padding-right: 165px;
+  }
+}
+
+body .container header h1 {
+  margin-top: 0;
+}
+
+@media (min-width: 1100px) {
+  body .container header h1 {
+    font-size: 3rem;
+  }
+}
+
+body .container header p {
+  margin-bottom: 70px;
+}
+
+@media (min-width: 1500px) {
+  body .container header p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  body .container header {
+    text-align: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1100px) {
+  body .container .signup {
+    width: 50%;
+    margin-left: 75px;
+  }
+}
+
+body .container .signup .try {
+  height: 88px;
+  background-color: #5d54a3;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.18);
+}
+
+@media (min-width: 1100px) {
+  body .container .signup .try {
+    height: 60px;
+    max-width: 750px;
+  }
+}
+
+body .container .signup .try span {
+  font-weight: bolder;
+}
+
+body .container .signup form {
+  background-color: white;
+  color: #b9b6d3;
+  border-radius: 12px;
+  padding: 40px;
+  -webkit-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.18);
+}
+
+@media (min-width: 1100px) {
+  body .container .signup form {
+    max-width: 750px;
+  }
+}
+
+body .container .signup form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+body .container .signup form .input .error-msg {
+  color: #ff7a7a;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7em;
+  text-align: right;
+  font-style: italic;
+}
+
+body .container .signup form .input input {
+  height: 55px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: #b9b6d3;
+  border-width: 1px;
+  font-weight: 700;
+  padding-left: 22px;
+  font-size: 0.9rem;
+}
+
+body .container .signup form .input .error-msg {
+  visibility: hidden;
+}
+
+body .container .signup form .input img {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  visibility: hidden;
+}
+
+body .container .signup form .input.error input {
+  border-color: #ff7a7a;
+  border-width: 2px;
+}
+
+body .container .signup form .input.error img, body .container .signup form .input.error .error-msg {
+  visibility: visible;
+}
+
+body .container .signup form button {
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #37cc8a;
+  color: white;
+  height: 56px;
+  border-style: none;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 4px 0px 0px rgba(29, 100, 3, 0.5);
+          box-shadow: 0px 4px 0px 0px rgba(29, 100, 3, 0.5);
+}
+
+body .container .signup .terms {
+  font-size: 0.6rem;
+  line-height: 1.2rem;
+}
+
+body .container .signup .terms span {
+  color: #ff7a7a;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=main.css.map */
